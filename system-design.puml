@@ -1,0 +1,18 @@
+@startuml
+
+actor "user" as user
+node "Kotlin ReSTful Api" {
+    component "Controller" as controller
+    component "Service" as service
+    component "Repository" as repository
+}
+
+database "MySql" as database
+
+user <--> controller
+controller <--> service
+service <--> repository
+repository <--> database
+
+@enduml
+

@@ -1,0 +1,56 @@
+POST http://localhost:8080/api/products
+X-Api-Key: SECRET
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "A013",
+  "name": "Mac Book Pro 17",
+  "price": 3000000,
+  "quantity": 10
+}
+
+###
+
+POST http://localhost:8080/api/products
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": "A012",
+  "name": "Asus ROG",
+  "price": 1,
+  "quantity": 10
+}
+
+###
+
+
+GET http://localhost:8080/api/products/A0010
+Content-Type: application/json
+Accept: application/json
+
+
+###
+PUT http://localhost:8080/api/products/A001
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "Apple Mac Book pro 15 2020",
+  "price": 4000000,
+  "quantity": 100
+}
+
+###
+DELETE http://localhost:8080/api/products/A001
+Accept: application/json
+
+###
+
+GET http://localhost:8080/api/products?size=5
+Accept: application/json
+###
+
+GET http://localhost:8080/api/products?size=5&page=2
+Accept: application/json
